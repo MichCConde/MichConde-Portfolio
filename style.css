@@ -1,6 +1,9 @@
+* {
+  box-sizing: border-box;
+}
 body {
   box-sizing: border-box;
-  background-color: black;
+  background-color: white;
   margin: 0;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
@@ -16,6 +19,7 @@ header {
   backdrop-filter: blur(2.5px);
   -webkit-backdrop-filter: blur(2.5px);
   border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.5s;
 }
 /* Sticky header */
 .sticky {
@@ -23,14 +27,21 @@ header {
   top: 0;
   width: 100%;
 }
-
+.headerChange {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.89);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
 /* Navigations */
 header a {
   text-decoration: none;
 }
 .nav__link {
   color: #f4f4f4;
-  opacity: 0.8;
+  opacity: 0.9;
   text-align: center;
   font-size: 22px; 
   padding: 0 5px;
@@ -39,7 +50,6 @@ header a {
   transition: all 0.4s;
   position: relative;
 }
-
 /* Effects */
 .nav__link:hover {
   opacity: 1;
@@ -61,13 +71,12 @@ header a {
 .nav__link:focus::after {
   opacity: 1;
 }
-
 /* Logo */
 header a.logo {
   font-size: 25px;
   font-weight: bold;
 }
-header img {
+.logo img {
   max-height: 40px;
   position: absolute;
   align-items: center;
@@ -106,7 +115,7 @@ button:hover {
   color: white;
   background-image: url("resource/Hero\ Section.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100%;
 }
 .heroSection .content{
   flex: auto;
@@ -129,17 +138,17 @@ button:hover {
   padding: 1rem 1rem 1rem 0rem;
 }
 /*Social media icons*/
-.fa {
+body .fa {
   padding: 20px;
   font-size: 30px;
-  width: 20px;
+  width: 8vh;
   text-align: center;
   text-decoration: none;
-  border-radius: 100%;
+  border-radius: 50%;
   background: #d90429;
   color: white;
   transition: transform .2s;
-  margin-right: 20px;
+  margin: 20px 20px 0px 0px;
   opacity: 0.7;
 }
 .fa:hover {
@@ -158,3 +167,84 @@ button:hover {
     float: none;
   }
 }
+
+footer {
+  background-image: url("resource/FooterImg2.png");
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+.footerContent {
+  color: white;
+  margin: 0px 300px 0px;
+  padding: 60px;
+}
+footer .column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+footer .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+footer img {
+  align-items: center;
+  float: left;
+  height: 80px;
+  
+}
+.pageLinks {
+  color: #fff;
+  text-align: center;
+  line-height: 1.5rem;
+  transition: all 0.4s;
+  position: relative;
+}
+/* Effects */
+.pageLinks:hover {
+  opacity: 1;
+  color: #d90429;
+}
+.pageLinks::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: #d90429;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  transition: all 0.2s;
+  pointer-events: none;
+  opacity: 0;
+}
+.pageLinks:hover::after,
+.pageLinks:focus::after {
+  opacity: 1;
+}
+
+footer li, a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+  font-size: 16px;
+}
+.footerIcons .fa {
+  font-size: 1rem;
+  padding: 10px;
+  width: 4vh;
+  margin: 0px 10px 0px 0px;
+}
+
+.footerCreds {
+  text-align: center;
+  padding: 3px;
+  color: white;
+}
+
+
