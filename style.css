@@ -102,7 +102,6 @@ header button {
 }
 button:hover {
   background-color: #d90427c7; 
-  color: white;
   opacity: 1;
   transform: scale(1);
 }
@@ -121,7 +120,6 @@ button:hover {
   flex: auto;
   margin: 0px 300px 0px;
   padding: 150px 0;
-  
 }
 
 .heroSection .content h1 {
@@ -166,8 +164,22 @@ body .fa {
   .header-right {
     float: none;
   }
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
-
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 footer {
   background-image: url("resource/FooterImg2.png");
   position: relative;
@@ -227,7 +239,6 @@ footer img {
 .pageLinks:focus::after {
   opacity: 1;
 }
-
 footer li, a {
   text-decoration: none;
   list-style-type: none;
@@ -240,11 +251,83 @@ footer li, a {
   width: 4vh;
   margin: 0px 10px 0px 0px;
 }
-
 .footerCreds {
   text-align: center;
   padding: 3px;
   color: white;
 }
 
+#about-me {
+  margin: 0;
+  padding: 60px 300px;
+}
+#about-me h2 {
+  font-size: 54px;
+}
+#about-me h3 {
+  font-size: 32px;
+}
+#about-me p {
+  font-size: 26px;
+}
+.myImage {
+  height: 500px;
+  float: right;
+  margin-right: -2rem;
+  margin-top: -1rem;
+  box-shadow: 10px 10px 20px #00000020;
+  border-radius: 3px;
+}
+.myImageContainer {
+  background-color: #d90427;
+  height: 500px;
+  width: 505px;
+  padding-top: 50px;
+  box-shadow: 10px 10px 20px #00000020;
+  border-radius: 3px;
+}
 
+#services {
+  margin: 0;
+  padding: 100px 300px;
+}
+#services h2 {
+  font-size: 54px;
+}
+#services .column {
+  float: left;
+  padding: 1rem;
+}
+#services .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  transition: 0.3s ease-in-out;
+  border-radius: 6px;
+}
+#services .card:hover {
+  background-color: #d90427c7;
+  color: white;
+}
+
+
+#my-works {
+  margin: 0px 300px 0px;
+  padding: 150px 0;
+}
+
+#client-testimonial {
+  background-color: #000;
+  color: white;
+}
+#client-testimonial .content {
+  flex: auto;
+  margin: 0px 300px 0px;
+  padding: 150px 0;
+}
+
+#contact-form {
+  margin: 0px 300px 0px;
+  padding: 150px 0;
+}
