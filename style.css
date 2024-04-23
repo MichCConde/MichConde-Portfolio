@@ -5,8 +5,7 @@ body {
   box-sizing: border-box;
   background-color: white;
   margin: 0;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
 }
 header {
@@ -43,7 +42,7 @@ header a {
   color: #f4f4f4;
   opacity: 0.9;
   text-align: center;
-  font-size: 22px; 
+  font-size: 20px; 
   padding: 0 5px;
   margin: 20px;
   line-height: 25px;
@@ -124,11 +123,12 @@ button:hover {
 
 .heroSection .content h1 {
   margin: 0;
-  font-size: 120px;
+  font-size: 74px;
 }
 .heroSection .content p {
   margin: 0;
-  font-size: 32px;
+  padding: 5px;
+  font-size: 24px;
 }
 
 .socmedContainer {
@@ -261,14 +261,14 @@ footer li, a {
   margin: 0;
   padding: 60px 300px;
 }
-#about-me h2 {
-  font-size: 54px;
+#about-me h2  {
+  font-size: 40px;
 }
 #about-me h3 {
-  font-size: 32px;
+  font-size: 26px;
 }
 #about-me p {
-  font-size: 26px;
+  font-size: 20px;
 }
 .myImage {
   height: 500px;
@@ -292,7 +292,7 @@ footer li, a {
   padding: 100px 300px;
 }
 #services h2 {
-  font-size: 54px;
+  font-size: 40px;
 }
 #services .column {
   float: left;
