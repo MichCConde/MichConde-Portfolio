@@ -9,10 +9,9 @@ body {
   font-style: normal;
 }
 header {
-  padding: 2rem 300px 1.5rem;
+  padding: 16px 16%;
   overflow: hidden;
   position: relative;
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2.5px);
@@ -27,7 +26,6 @@ header {
   width: 100%;
 }
 .headerChange {
-  /* From https://css.glass */
   background: rgba(0, 0, 0, 0.89);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.9px);
@@ -42,7 +40,7 @@ header a {
   color: #f4f4f4;
   opacity: 0.9;
   text-align: center;
-  font-size: 20px; 
+  font-size: 1vw;
   padding: 0 5px;
   margin: 20px;
   line-height: 25px;
@@ -76,6 +74,7 @@ header a.logo {
   font-weight: bold;
 }
 .logo img {
+  height: 100%;
   max-height: 40px;
   position: absolute;
   align-items: center;
@@ -104,10 +103,64 @@ button:hover {
   opacity: 1;
   transform: scale(1);
 }
-
 .header-right {
   float: right;
 }
+/*Hamburger menu for phone
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.3s;
+}
+.hamburger:before,
+.hamburger:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  right: 0;
+  background:  #fff;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.hamburger:before {
+  top: -10px;
+  width: 20px;
+}
+.hamburger:after {
+  top: 10px;
+  width: 25px;
+}
+.toggle-menu {
+  position: absolute;
+  width:  30px;
+  height: 100%;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0;
+}
+.hamburger,
+.toggle-menu {
+  display: none;
+}
+.navigation input:checked ~ .hamburger {
+  background: transparent;
+}
+.navigation input:checked ~ .hamburger:before {
+  top: 0;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+.navigation input:checked ~ .hamburger:after {
+  top: 0;
+  transform: rotate(45deg);
+  width: 30px;
+}
+*/
 .heroSection{
   margin: auto;
   color: white;
@@ -117,20 +170,18 @@ button:hover {
 }
 .heroSection .content{
   flex: auto;
-  margin: 0px 300px 0px;
-  padding: 150px 0;
+  margin: 0px;
+  padding: 8% 16%;
 }
-
 .heroSection .content h1 {
   margin: 0;
-  font-size: 74px;
+  font-size: 4vw;
 }
 .heroSection .content p {
   margin: 0;
   padding: 5px;
-  font-size: 24px;
+  font-size: 1.5vw;
 }
-
 .socmedContainer {
   flex: auto;
   padding: 1rem 1rem 1rem 0rem;
@@ -153,23 +204,6 @@ body .fa {
   opacity: 1;
   transform: scale(1.2);
 }
-
-/* Responsiveness */
-@media screen and (max-width: 500px) {
-  header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .header-right {
-    float: none;
-  }
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
 .column {
   float: left;
   width: 50%;
@@ -191,8 +225,8 @@ footer {
 }
 .footerContent {
   color: white;
-  margin: 0px 300px 0px;
-  padding: 60px;
+  margin: 0px 16% 0px;
+  padding: 60px 0;
 }
 footer .column {
   float: left;
@@ -259,7 +293,7 @@ footer li, a {
 
 #about-me {
   margin: 0;
-  padding: 60px 300px;
+  padding: 4% 16%;
 }
 #about-me h2  {
   font-size: 40px;
@@ -271,7 +305,8 @@ footer li, a {
   font-size: 20px;
 }
 .myImage {
-  height: 500px;
+  max-height: 500px;
+  height: 100%;
   float: right;
   margin-right: -2rem;
   margin-top: -1rem;
@@ -280,16 +315,22 @@ footer li, a {
 }
 .myImageContainer {
   background-color: #d90427;
-  height: 500px;
+  max-height: 500px;
+  height: 100%;
   width: 505px;
   padding-top: 50px;
+  padding-bottom: 450px;
   box-shadow: 10px 10px 20px #00000020;
   border-radius: 3px;
+}
+#about-me .column {
+  max-width: 600px;
+  width: 100%;
 }
 
 #services {
   margin: 0;
-  padding: 100px 300px;
+  padding: 100px 16%;
 }
 #services h2 {
   font-size: 40px;
@@ -313,7 +354,7 @@ footer li, a {
 
 
 #my-works {
-  margin: 0px 300px 0px;
+  margin: 0px 16% 0px;
   padding: 150px 0;
 }
 
@@ -323,11 +364,11 @@ footer li, a {
 }
 #client-testimonial .content {
   flex: auto;
-  margin: 0px 300px 0px;
+  margin: 0px 16% 0px;
   padding: 150px 0;
 }
 
 #contact-form {
-  margin: 0px 300px 0px;
+  margin: 0px 16% 0px;
   padding: 150px 0;
 }
